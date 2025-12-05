@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>З Днем Народження!</title>
+	<style>
+		/* Общие стили и шрифт */
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f4f4f4;
+			color: #333;
+			scroll-behavior: smooth;
+		}
+
+		/* Стиль для главного заголовка */
+		.header-main {
+			/* Сделаем градиент более праздничным и ярким */
+			background: linear-gradient(135deg, #ffde59, #ff57a9);
+			color: white;
+			padding: 60px 20px;
+			text-align: center;
+			box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+		}
+
+		.header-main h1 {
+			margin: 0;
+			font-size: 3.5em;
+			letter-spacing: 6px;
+			font-weight: 800;
+			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+		}
+
+		/* Контейнер для всех разделов */
+		.container {
+			max-width: 1200px;
+			margin: 40px auto;
+			padding: 0 20px;
+		}
+
+		/* Стиль для секций (времен года) */
+		.season-section {
+			padding: 50px 0;
+			margin-bottom: 30px;
+			border-radius: 15px;
+			/* Немного скруглим углы */
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.season-section h2 {
+			font-size: 2.5em;
+			margin-bottom: 40px;
+			display: inline-block;
+			padding: 0 20px 10px;
+			border-bottom: 5px double;
+			/* Двойная линия */
+		}
+
+		/* Цветовая схема для каждого сезона */
+		#autumn {
+			background-color: #fff8e1;
+			border-color: #ff9800;
+		}
+
+		#autumn h2 {
+			color: #ff9800;
+			border-color: #ff9800;
+		}
+
+		#winter {
+			background-color: #e3f2fd;
+			border-color: #2196f3;
+		}
+
+		#winter h2 {
+			color: #2196f3;
+			border-color: #2196f3;
+		}
+
+		#spring {
+			background-color: #e8f5e9;
+			border-color: #4caf50;
+		}
+
+		#spring h2 {
+			color: #4caf50;
+			border-color: #4caf50;
+		}
+
+		#summer {
+			background-color: #fffde7;
+			border-color: #ffeb3b;
+		}
+
+		#summer h2 {
+			color: #ffc107;
+			border-color: #ffc107;
+		}
+
+		/* Контейнер для фото-рамок */
+		.photo-grid {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			gap: 30px;
+			/* Увеличим расстояние между фото */
+		}
+
+		/* ----- ГЛАВНОЕ ИЗМЕНЕНИЕ: ПРАЗДНИЧНАЯ РАМКА ----- */
+		.photo-frame {
+			width: 30%;
+			min-width: 280px;
+			background-color: white;
+			/* Праздничная двойная рамка */
+			border: 5px double #ff6699;
+			/* Стиль Полароида: белый отступ вокруг фото */
+			padding: 15px 15px 30px;
+			border-radius: 12px;
+			overflow: visible;
+			/* Чтобы тень была видна */
+			/* Праздничная тень: мягкая и объемная */
+			box-shadow: 0 10px 25px rgba(255, 102, 153, 0.5), 0 0 0 5px #fff;
+			transition: transform 0.4s ease, box-shadow 0.4s ease;
+		}
+
+		.photo-frame:hover {
+			transform: scale(1.05) rotate(2deg);
+			/* Небольшой поворот для веселья */
+			border-color: #ffc107;
+			/* Золотой при наведении */
+			box-shadow: 0 15px 35px rgba(255, 193, 7, 0.7), 0 0 0 5px #fff;
+		}
+
+		/* ----------------------------------------------- */
+
+		.photo-frame img {
+			width: 100%;
+			height: auto;
+			display: block;
+			object-fit: cover;
+			aspect-ratio: 4/5;
+			border-radius: 6px;
+			/* Небольшое скругление самого фото */
+		}
+
+		.photo-caption {
+			padding: 15px;
+			font-style: italic;
+			color: #666;
+			margin-top: 10px;
+			font-weight: 600;
+		}
+
+		/* Футер (нижняя часть) */
+		.footer {
+			text-align: center;
+			padding: 25px;
+			background-color: #333;
+			color: white;
+			font-size: 1em;
+		}
+
+		/* Медиа-запросы для мобильных устройств */
+		@media (max-width: 768px) {
+			.header-main h1 {
+				font-size: 2em;
+			}
+
+			.photo-grid {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.photo-frame {
+				width: 90%;
+				min-width: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<header class="header-main">
+		<h1>С ДНЕМ РОЖДЕНИЯ!</h1>
+	</header>
+
+	<div class="container">
+
+		<section id="autumn" class="season-section">
+			<h2>🍁 УЛЫБКА</h2>
+			<div class="photo-grid">
+				<div class="photo-frame">
+					<img src="photo_5418227340305100209_y.jpg" alt="Осеннее фото 1">
+					<p class="photo-caption">Самый яркий свет!</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100204_y.jpg" alt="Осеннее фото 2">
+					<p class="photo-caption">Беззаботное счастье</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100206_y.jpg" alt="Осеннее фото 3">
+					<p class="photo-caption">Твоя любимая улыбка</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="winter" class="season-section">
+			<h2>На Стиле</h2>
+			<div class="photo-grid">
+				<div class="photo-frame">
+					<img src="photo_5418227340305100054_y.jpg" alt="Зимнее фото 1">
+					<p class="photo-caption">Гармония и изящество</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100045_y.jpg" alt="Зимнее фото 2">
+					<p class="photo-caption">Всегда в тренде!</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100208_y.jpg" alt="Зимнее фото 3">
+					<p class="photo-caption">Икона стиля</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="spring" class="season-section">
+			<h2>Черно белое кино-о-о-о</h2>
+			<div class="photo-grid">
+				<div class="photo-frame">
+					<img src="photo_5413688083859239231_y.jpg" alt="Весеннее фото 1">
+					<p class="photo-caption">Классическая красота</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100205_y.jpg" alt="Весеннее фото 2">
+					<p class="photo-caption">Как в старом фильме</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100212_y.jpg" alt="Весеннее фото 3">
+					<p class="photo-caption">Эмоции без цвета</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="summer" class="season-section">
+			<h2>Телефончик</h2>
+			<div class="photo-grid">
+				<div class="photo-frame">
+					<img src="photo_5418227340305100216_y.jpg" alt="Летнее фото 1">
+					<p class="photo-caption">Моменты, пойманные на ходу</p>
+				</div>
+				<div class="photo-frame">
+					<img src="photo_5418227340305100214_y.jpg" alt="Летнее фото 2">
+					<p class="photo-caption">Лето, солнце, отдых</p>
+				</div>
+				<div class="photo-frame">
+					<img src="145ccf1a-6cb5-4e1f-9347-a96fedec22aa.jpeg" alt="Летнее фото 3">
+					<p class="photo-caption">В кадре</p>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<footer class="footer">
+		<p>С любовью, специально для тебя! ❤️</p>
+	</footer>
+
+</body>
+
+</html>
